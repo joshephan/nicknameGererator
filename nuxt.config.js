@@ -6,12 +6,12 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '바삭바삭한 햇빛',
+    title: '바삭바삭한 햇빛',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: '햇빛과 표현'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/sun.png' }
