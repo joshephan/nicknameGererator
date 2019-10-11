@@ -18,9 +18,11 @@ export default {
       { property: 'og:image:width', content: '128'},
       { property: 'og:image:height', content: '128'},
       { property: 'og:image:type', content: 'image/jpeg'},
+      
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/sun.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/sun.png' },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Gugi|Hi+Melody|Kirang+Haerang|Nanum+Brush+Script|Nanum+Myeongjo|Noto+Serif+KR|Yeon+Sung&display=swap"}
     ]
   },
   /*

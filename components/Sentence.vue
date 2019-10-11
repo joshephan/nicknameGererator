@@ -1,9 +1,11 @@
 <template>
   <div class="sentence">
     <h1>{{sentence}}</h1>
-      <v-btn color="error" fab large dark @click="createSentence">
-        <v-icon>mdi-white-balance-sunny</v-icon>
-    </v-btn>
+    <v-btn fab large dark @click="createSentence">
+      <v-avatar>
+        <img src="/sun.png">
+      </v-avatar>
+    </v-btn>  
   </div>
 </template>
 <script>
@@ -3041,6 +3043,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  font-family: Noto Serif KR;
 }
 h1 {
   margin: 5rem 0 3rem;
