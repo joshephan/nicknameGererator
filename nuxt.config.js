@@ -11,7 +11,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '햇빛과 표현'}
+      { hid: 'description', name: 'description', content: '햇빛과 표현'},
+      { property: 'og:site_title', content:'바삭한 햇빛'},
+      { property: 'og:description', content:'햇빛이 맛있다. 햇빛이 까끌까끌하다. 햇빛이 날카롭다. 햇빛이 달콤하다. 햇빛이 새롭다. 햇빛이 놀랍다.'},
+      { property: 'og:image', content: '/sun.png'},
+      { property: 'og:image:width', content: '128'},
+      { property: 'og:image:height', content: '128'},
+      { property: 'og:image:type', content: 'image/jpeg'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/sun.png' }
