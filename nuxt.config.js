@@ -6,8 +6,8 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '바삭바삭한 햇빛',
-    title: '바삭바삭한 햇빛',
+    titleTemplate: '바삭한 햇빛',
+    title: '바삭한 햇빛',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
