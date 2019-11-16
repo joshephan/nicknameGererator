@@ -1,14 +1,16 @@
 <template>
   <div class="sentence">
-    <h1>{{sentence}}</h1>
+    <h1>{{ sentence }}</h1>
     <v-btn fab large dark @click="createSentence">
       <v-avatar>
-        <img src="/sun.png">
+        <img src="/sun.png" />
       </v-avatar>
-    </v-btn>  
+    </v-btn>
   </div>
 </template>
 <script>
+import text from "@/assets/word.txt";
+
 export default {
   data() {
     return {
@@ -3022,13 +3024,26 @@ export default {
     this.createSentence();
   },
   methods: {
-    combination(array) {
-      return array[Math.floor(Math.random() * array.length)];
+    checkBatchimEnding(word) {
+      if (typeof word !== 'string') return null;
+    
+      var lastLetter = word[word.length - 1];
+      var uni = lastLetter.charCodeAt(0);
+    
+      if (uni < 44032 || uni > 55203) return null;
+    
+      return (uni - 44032) % 28 != 0;
     },
     createSentence() {
-      this.sentence = `햇빛이 ${this.combination(
-        this.adjective
-      )}.`;
+      const array = text.split(",");
+      const length = array.length;
+      const firstWord = array[Math.floor(Math.random() * length)];
+      const isExist = this.checkBatchimEnding(firstWord);
+      const middleText = ["의", isExist ? "과" : "와"];
+      
+      this.sentence = `${firstWord}${
+        middleText[Math.floor(Math.random() * middleText.length)]
+      } ${array[Math.floor(Math.random() * length)]}`;
     }
   }
 };
@@ -3049,4 +3064,3 @@ h1 {
   margin: 5rem 0 3rem;
 }
 </style>
-

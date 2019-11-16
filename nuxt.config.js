@@ -6,14 +6,14 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '바삭한 햇빛',
-    title: '바삭한 햇빛',
+    titleTemplate: '닉네임 생성기',
+    title: '닉네임 생성기',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '햇빛과 표현'},
-      { property: 'og:site_title', content:'바삭한 햇빛'},
-      { property: 'og:description', content:'햇빛이 맛있다. 햇빛이 까끌까끌하다. 햇빛이 날카롭다. 햇빛이 달콤하다. 햇빛이 새롭다. 햇빛이 놀랍다.'},
+      { hid: 'description', name: 'description', content: '닉네임 생성기'},
+      { property: 'og:site_title', content:'닉네임 생성기'},
+      { property: 'og:description', content:'한국어 닉네임 생성기 중 마음에 드는게 없어서 한 번 만들어보자 싶어 만들어봤는데, 막상 해보니 어려운 것 같습니다.'},
       { property: 'og:image', content: '/sun.png'},
       { property: 'og:image:width', content: '128'},
       { property: 'og:image:height', content: '128'},
@@ -77,8 +77,14 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
+   extend (config, ctx) {
+    config.module.rules.push({
+      enforce: 'pre',
+      test: /\.txt$/,
+      loader: 'raw-loader',
+      exclude: /(node_modules)/
+    });
+  }
   },
   generate: {
     fallback: true
