@@ -5,6 +5,8 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require('fs');
+const _ = require('lodash');
+
 let result = [];
 let page = 0;
 
@@ -47,3 +49,11 @@ const parsingLoop = () => {
 }
 
 // parsingLoop();
+
+// 단어 필터링 후 단어 뭉치 만들기
+// fs.readFile('./assets/not-two-letters.txt', 'utf8', (err, data) => {
+//   const result = _.filter(data.split(','), (o) => { return o.length === 3; } )
+//   fs.writeFile('./assets/3-word.txt', result, 'utf8', (err) => {
+//     console.log(`${result.length}개 단어 저장 완료`);
+//   });
+// });

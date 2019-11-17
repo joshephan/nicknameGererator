@@ -43,7 +43,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
   /*
   ** Nuxt.js modules
@@ -78,13 +78,13 @@ export default {
     ** You can extend webpack config here
     */
    extend (config, ctx) {
-    config.module.rules.push({
-      enforce: 'pre',
-      test: /\.txt$/,
-      loader: 'raw-loader',
-      exclude: /(node_modules)/
-    });
-  }
+      config.module.rules.push({
+        enforce: 'pre',
+        test: /\.txt$/,
+        loader: 'raw-loader',
+        exclude: /(node_modules)/
+      });
+    }
   },
   generate: {
     fallback: true
