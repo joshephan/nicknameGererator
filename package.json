@@ -18,5 +18,8 @@
     "nuxt": "^2.0.0",
     "raw-loader": "^3.1.0",
     "vuetify": "^2.1.10"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.2.1"
   }
 }
