@@ -11,19 +11,22 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '닉네임 생성기'},
-      { property: 'og:site_title', content:'닉네임 생성기'},
-      { property: 'og:description', content:'한국어 닉네임 생성기 중 마음에 드는게 없어서 한 번 만들어보자 싶어 만들어봤는데, 막상 해보니 어려운 것 같습니다.'},
-      { property: 'og:image', content: '/sun.png'},
-      { property: 'og:image:width', content: '128'},
-      { property: 'og:image:height', content: '128'},
-      { property: 'og:image:type', content: 'image/jpeg'},
-      
+      { hid: 'description', name: 'description', content: '닉네임 생성기' },
+      { property: 'og:site_title', content: '닉네임 생성기' },
+      { property: 'og:description', content: '한국어 닉네임 생성기 중 마음에 드는게 없어서 한 번 만들어보자 싶어 만들어봤는데, 막상 해보니 어려운 것 같습니다.' },
+      { property: 'og:image', content: '/sun.png' },
+      { property: 'og:image:width', content: '128' },
+      { property: 'og:image:height', content: '128' },
+      { property: 'og:image:type', content: 'image/jpeg' },
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/sun.png' },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Gugi|Hi+Melody|Kirang+Haerang|Nanum+Brush+Script|Nanum+Myeongjo|Noto+Serif+KR|Yeon+Sung&display=swap"}
-    ]
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Gugi|Hi+Melody|Kirang+Haerang|Nanum+Brush+Script|Nanum+Myeongjo|Noto+Serif+KR|Yeon+Sung&display=swap" }
+    ],
+    script: [{
+      'data-ad-client': "ca-pub-8163004244831902", async: true, src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    }]
   },
   /*
   ** Customize the progress-bar color
@@ -80,7 +83,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-   extend (config, ctx) {
+    extend(config, ctx) {
       config.module.rules.push({
         enforce: 'pre',
         test: /\.txt$/,
