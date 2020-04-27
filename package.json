@@ -17,6 +17,7 @@
     "lodash": "^4.17.15",
     "nuxt": "^2.0.0",
     "raw-loader": "^3.1.0",
+    "vue-disqus": "^3.0.5",
     "vuetify": "^2.1.10"
   },
   "devDependencies": {

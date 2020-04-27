@@ -1,16 +1,11 @@
 <template>
   <v-app :dark="dark">
-    <v-content fluid fill-height>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-content>
-    <v-footer :fixed="true" app>
-      <v-container fluid class="text-right">
-        만든이:
-        <a href="https://brunch.co.kr/@skykamja24">상훈</a>
-      </v-container>
-    </v-footer>
+    <v-container>
+      <nuxt />
+    </v-container>
+    <div class="comment">
+      <vue-disqus shortname="nickname-generator"></vue-disqus>
+    </div>
   </v-app>
 </template>
 
@@ -33,5 +28,10 @@ export default {
 <style scoped>
 .container {
   font-family: Noto Serif KR;
+}
+.comment {
+  max-width: 600px;
+  margin: 4rem auto;
+  width: 90%;
 }
 </style>
