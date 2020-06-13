@@ -56,6 +56,9 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-8163004244831902'
+    }]
   ],
   /*
   ** vuetify module configuration
